@@ -1,0 +1,72 @@
+@import "../../index.scss";
+
+section#client {
+  background: $bgprimary;
+  width: 100vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 64px;
+
+  .img-container {
+    img {
+      width: 630px;
+      height: 555px;
+    }
+  }
+
+  .text-container {
+    font-family: $fontpopins;
+    width: 470px;
+    height: 154px;
+
+    h3 {
+      font-weight: 500;
+      font-size: 48px;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 48px;
+    }
+
+    .sponsor {
+      display: flex;
+      gap: 32.14px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 24px;
+    .img-container {
+      img {
+        width: 100%;
+        height: fit-content;
+        object-fit: contain;
+      }
+    }
+
+    .text-container {
+      width: fit-content;
+      height: fit-content;
+
+      .sponsor {
+        img {
+          width: 90px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .text-container {
+      h3 {
+        font-size: 35px;
+      }
+    }
+  }
+}

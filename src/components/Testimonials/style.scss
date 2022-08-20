@@ -1,0 +1,125 @@
+@import "../../index.scss";
+
+section#testimoni {
+  background: $bgprimary;
+  width: 100vw;
+
+  .header-text {
+    display: flex;
+    font-family: $fontpopins;
+    flex-flow: row wrap;
+    padding: 0 64px;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      width: 470px;
+      height: 164px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 48px;
+    }
+
+    p {
+      width: 450px;
+      height: 64px;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  .fluid {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .container {
+    font-family: $fontpopins;
+    padding: 80px 64px;
+    .card {
+      border-radius: 20px;
+      width: 370px;
+      height: 395px;
+      padding: 60px 40px;
+
+      p {
+        margin-top: 40.4px;
+        margin-bottom: 24px;
+        color: #fff;
+        font-size: 18px;
+      }
+
+      &:hover {
+        background: linear-gradient(
+          144.39deg,
+          #ffffff -278.56%,
+          #6d6d6d -78.47%,
+          #11101d 91.61%
+        );
+      }
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+
+      img {
+        width: 78px;
+        height: 78px;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 9px;
+        h4 {
+          color: #fff;
+        }
+        h3 {
+          color: #fff;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .header-text {
+      padding: 24px;
+
+      div {
+        width: fit-content;
+        height: fit-content;
+      }
+      p {
+        width: fit-content;
+      }
+    }
+
+    .container {
+      padding: 24px;
+      .card {
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .header-text {
+      div {
+        font-size: 30px;
+      }
+    }
+    .fluid {
+      margin-top: 24px;
+    }
+    .container {
+      .card {
+        padding: 24px;
+      }
+    }
+  }
+}

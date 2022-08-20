@@ -1,0 +1,235 @@
+@import "../../index.scss";
+
+section#about {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: $bgprimary;
+  color: white;
+  width: 100vw;
+
+  .card {
+    width: 770px;
+    padding: 89px 64px;
+
+    .fluid-text {
+      display: flex;
+      margin-bottom: 40px;
+      margin-top: 12px;
+
+      h3 {
+        font-family: $fontpopins;
+        font-weight: 600;
+        font-size: 67px;
+
+        span {
+          background: radial-gradient(
+            64.18% 64.18% at 71.16% 35.69%,
+            #def9fa 0.89%,
+            #bef3f5 17.23%,
+            #9dedf0 42.04%,
+            #7de7eb 55.12%,
+            #5ce1e6 71.54%,
+            #33bbcf 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+
+      .bola-card {
+        display: flex;
+        align-items: center;
+        border: $bgIcons solid 2px;
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        padding: 24px 34px;
+
+        p {
+          text-align: center;
+          font-family: $fontpopins;
+          font-weight: 600;
+          font-size: 18px;
+          background: linear-gradient(
+            157.81deg,
+            #def9fa -43.27%,
+            #bef3f5 -21.24%,
+            #9dedf0 12.19%,
+            #7de7eb 29.82%,
+            #5ce1e6 51.94%,
+            #33bbcf 90.29%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+    }
+
+    .text {
+      font-family: $fontpopins;
+      color: rgba(255, 255, 255, 0.7);
+      width: 483px;
+      height: 93px;
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+
+  .discount-card {
+    text-transform: uppercase;
+    font-family: $fontpopins;
+    font-size: 18px;
+    gap: 7px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+    border-radius: 10px;
+    width: 408px;
+    padding: 10px;
+    height: 40px;
+    color: rgba(255, 255, 255, 0.7);
+
+    span {
+      color: white;
+    }
+  }
+
+  .robot-img {
+    background: url("../assets/shadow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    img {
+      width: 669px;
+      height: 674px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .discount-card {
+      width: fit-content;
+      height: fit-content;
+    }
+    .card {
+      width: fit-content;
+      height: fit-content;
+      padding: 24px;
+
+      .fluid-text {
+        flex-direction: column;
+
+        width: fit-content;
+        h3 {
+          font-size: 35px;
+        }
+      }
+
+      .text {
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+
+    .robot-img {
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .discount-card {
+      width: fit-content;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .card {
+      .fluid-text {
+        .bola-card {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}
+
+section#card-client {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: $bgprimary;
+  padding: 0 64px;
+  padding-bottom: 65px;
+  width: 100vw;
+
+  .client {
+    color: white;
+    display: flex;
+    font-family: $fontpopins;
+    gap: 25px;
+    align-items: center;
+
+    h3 {
+      font-weight: 600;
+      font-size: 40.8925px;
+    }
+    p {
+      font-weight: 500;
+      font-size: 20.4463px;
+      margin-right: 24px;
+      text-transform: uppercase;
+      background: radial-gradient(
+          64.18% 64.18% at 71.16% 35.69%,
+          #def9fa 0.89%,
+          #bef3f5 17.23%,
+          #9dedf0 42.04%,
+          #7de7eb 55.12%,
+          #5ce1e6 71.54%,
+          #33bbcf 100%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    span {
+      background-color: white;
+      width: 2px;
+      height: 15px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 24px;
+    span {
+      display: none;
+    }
+
+    .client {
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        font-size: 30px;
+      }
+
+      p {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .client {
+      h3 {
+        font-size: 19px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

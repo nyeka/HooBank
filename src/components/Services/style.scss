@@ -1,0 +1,106 @@
+@import "../../index.scss";
+
+section#services {
+  background: $bgprimary;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 94px 0;
+
+  .sponsor {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+
+    img {
+      width: 192.25px;
+      height: 60px;
+      object-fit: contain;
+    }
+  }
+
+  .card-service {
+    font-family: $fontpopins;
+    align-self: center;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(
+      194.39deg,
+      #ffffff -278.56%,
+      #6d6d6d -78.47%,
+      #11101d 91.61%
+    );
+    width: 1370px;
+    height: 243px;
+    border-radius: 20px;
+
+    h3 {
+      color: #fff;
+      font-weight: 600;
+      font-size: 48px;
+    }
+
+    .text-smal {
+      width: 445px;
+      height: 58px;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .button-text {
+    display: flex;
+    color: #00040e;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 64px;
+    background: $bgbutton;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 24px;
+
+    .sponsor {
+      gap: 6px;
+      img {
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+      }
+    }
+
+    .card-service {
+      width: fit-content;
+      height: fit-content;
+      padding: 24px;
+
+      .text-smal {
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+    .button-text {
+      margin-top: 24px;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .card-service {
+      h3 {
+        font-size: 35px;
+      }
+    }
+  }
+}

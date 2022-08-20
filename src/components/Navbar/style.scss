@@ -1,0 +1,52 @@
+@import "../../index.scss";
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: $bgprimary;
+  width: 100vw;
+  height: 10px;
+  align-items: center;
+  padding: 44px 64px;
+
+  img {
+    width: 180px;
+  }
+
+  ul {
+    display: flex;
+    gap: 56px;
+    color: white;
+    font-weight: 400;
+    font-family: $fontpopins;
+    font-size: 16px;
+  }
+
+  .garis {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .satu {
+      background: #fff;
+      width: 27px;
+      height: 3px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 44px 24px;
+
+    ul {
+      display: none;
+    }
+    img {
+      width: 120px;
+    }
+  }
+
+  @media screen and (min-width: 760px) {
+    .garis {
+      display: none;
+    }
+  }
+}
