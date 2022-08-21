@@ -47,9 +47,10 @@ section#deals {
     padding: 24px;
 
     .img {
+      margin-top: 24px;
       img {
         width: 100%;
-        height: fit-content;
+        height: 100%;
         object-fit: contain;
       }
     }
