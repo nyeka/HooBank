@@ -75,8 +75,8 @@ section#services {
     .sponsor {
       gap: 6px;
       img {
-        width: 80%;
-        height: 80%;
+        width: 200px;
+        height: 190px;
         object-fit: contain;
       }
     }
@@ -97,6 +97,13 @@ section#services {
   }
 
   @media screen and (max-width: 375px) {
+    .sponsor {
+      img {
+        width: 110px;
+        height: 100px;
+      }
+    }
+
     .card-service {
       h3 {
         font-size: 35px;
